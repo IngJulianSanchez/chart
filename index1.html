@@ -1,41 +1,52 @@
 <html>
   <head>
     <body>
-     <center>
-       
+
+      <center>
+
        <H1>Julian Alejandro Sanchez Lugo</H1>
-       <a href="index.html"> <img src="volver2.png"> </a>     
-       
+
+       <a href="index.html"> <img src="volver2.png"> </a>
+      
     </body>
 
+    
     
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
-        
+
         var a = parseInt(prompt('Ingrese dato para IE6','') )
         var b = parseInt(prompt('Ingrese dato para IE7','') )
         var c = parseInt(prompt('Ingrese dato para IE8','') )
-        
+
         var data = google.visualization.arrayToDataTable([
           ['Tema', 'Datos asignados por PDF prueba'],
           ['IE6',     a],
           ['IE7',      b],
           ['IE8',  c]
         ]);
+
         var options = {
           title: 'Usando librería google chart'
         };
+
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
         chart.draw(data, options);
       }
     </script>
   </head>
+
   <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+    <div id="piechart" style="width: 900px; height: 500px;"></div>   
+
+      </center>
     
-    </center>
+
   </body>
 </html>
