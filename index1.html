@@ -17,11 +17,16 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
+        
+        var a = parseInt(prompt('Ingrese dato para IE6','') )
+        var b = parseInt(prompt('Ingrese dato para IE7','') )
+        var c = parseInt(prompt('Ingrese dato para IE8','') )
+        
         var data = google.visualization.arrayToDataTable([
           ['Tema', 'Datos asignados por PDF prueba'],
-          ['IE6',     50],
-          ['IE7',      40],
-          ['IE8',  10]
+          ['IE6',     a],
+          ['IE7',      b],
+          ['IE8',  c]
         ]);
         var options = {
           title: 'Usando librería google chart'
